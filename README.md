@@ -14,8 +14,8 @@ Repository of `hazemha/laravel-echo-server-docker` Docker image.
 docker pull hazemha/laravel-echo-server-docker:latest
 ```
 ### Run laravel-echo-server
-
-<h6> You can't run it alone <\h6>
+##### You can't run it alone 
+  
   
 ```
   redis:
@@ -32,10 +32,9 @@ docker pull hazemha/laravel-echo-server-docker:latest
             - redis
         depends_on: 
             - redis
-````
+```
 
-
-### Run laravel-echo-server
+#### Run laravel-echo-server
 inside your docker-compose.yml
 ```
 links: 
