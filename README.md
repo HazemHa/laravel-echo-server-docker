@@ -20,13 +20,12 @@ docker pull hazemha/laravel-echo-server-docker:latest
 ```
   redis:
         image: redis:alpine
-        volumes:
-            - ./www:/var/www
 
     laravelechoserver:
-        image: laravel-echo-server:latest
+        image: hazemha/laravel-echo-server-docker:latest
+        ports:
+            - 6001:6001
         volumes:
-            - ./www:/var/www
             - ./laravel-echo-server/laravel-echo-server.json:/var/www/laravel-echo-server.json
         links:
             - redis
